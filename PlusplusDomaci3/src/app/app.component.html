@@ -10,7 +10,10 @@
       </ol>
       <button (click)="prikaziParagraf = !prikaziParagraf; niz.push(niz.length+1) ">Display details</button>
       <p *ngIf="prikaziParagraf">Secret Password = tuna</p>
-      <p *ngFor="let ispis of niz">{{ispis}}</p>
+      <p *ngFor="let ispis of niz"
+         [ngStyle]="{backgroundColor: ispis >=5 ? 'blue' : 'white'}"
+         [ngClass]="{prekoPet: ispis >=5}"
+         >{{ispis}}</p>
     </div>
   </div>
 </div>
