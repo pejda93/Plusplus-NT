@@ -8,7 +8,7 @@
         <li>Log all button clicks in an array and output that array below the secret paragraph (maybe log a timestamp or simply an incrementing number)</li>
         <li>Starting at the 5th log item, give all future log items a blue background (via ngStyle) and white color (ngClass)</li>
       </ol>
-      <button (click)="prikaziParagraf = !prikaziParagraf; niz.push(niz.length+1) ">Display details</button>
+      <button class="btn btn-primary" (click)="prikaziParagraf = !prikaziParagraf; niz.push(niz.length+1) ">Display details</button>
       <p *ngIf="prikaziParagraf">Secret Password = tuna</p>
       <p *ngFor="let ispis of niz"
          [ngStyle]="{backgroundColor: ispis >=5 ? 'blue' : 'white'}"
@@ -18,3 +18,4 @@
   </div>
 </div>
 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
