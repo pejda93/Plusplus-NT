@@ -13,7 +13,7 @@
         <li>Style the element (e.g. paragraph) holding your output text differently in both components</li>
       </ol>
       <hr>
-      <app-game-control></app-game-control>
+      <app-game-control (output)="receiveEvent($event)" ></app-game-control>
     </div>
   </div>
 </div>
